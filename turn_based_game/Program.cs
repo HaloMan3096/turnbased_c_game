@@ -1,9 +1,12 @@
-﻿namespace turn_based_game;
-
-class Program
+﻿class Program
 {
-    static void Main(string[] args)
+    static async Task<int> Main()
     {
         Console.WriteLine("Hello, World!");
+
+        var lobby = new Lobby();
+        await lobby.Run();
+
+        return 0;
     }
 }
