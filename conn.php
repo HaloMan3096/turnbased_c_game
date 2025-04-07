@@ -1,7 +1,7 @@
 <?php
 
 //Connect to the database
-$link = new mysqli("localhost","root","12345", "prog455");
+$link = new mysqli("localhost","root","12345", "turnbasedgame");
 
 /* check connection */
 if(mysqli_connect_errno())

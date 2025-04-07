@@ -39,7 +39,7 @@ namespace ConsoleApp1
                 onComplete(response.response.lobbies);
             }, () =>
             {
-
+                Console.WriteLine("Failed to get lobbies");
             });
         }
 

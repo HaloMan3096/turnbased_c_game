@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.Json;
+﻿using System.Text.Json;
 using System.Collections.Specialized;
 
 namespace ConsoleApp1
@@ -13,7 +8,7 @@ namespace ConsoleApp1
 
         private HttpClient sharedClient = new()
         {
-            BaseAddress = new Uri("http://ec2-44-211-225-127.compute-1.amazonaws.com"),
+            BaseAddress = new Uri("http://ec2-18-224-123-254.us-east-2.compute.amazonaws.com"),
         };
 
         public void SendRequestASync(UriParam[] uriParams, Action<ServerResponse> onComplete, Action onError)
