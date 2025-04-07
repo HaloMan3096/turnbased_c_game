@@ -41,7 +41,7 @@ namespace ConsoleApp1
         {
             HttpResponseMessage response = await httpClient.GetAsync(string.Format("api.php?{0}", uriParams));
             var jsonResponse = await response.Content.ReadAsStringAsync();
-            //Console.WriteLine($"{jsonResponse}\n");
+            Console.WriteLine($"{jsonResponse}\n");
 
             try
             {
