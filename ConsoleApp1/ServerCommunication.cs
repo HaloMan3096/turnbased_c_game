@@ -39,6 +39,8 @@ namespace ConsoleApp1
 
         async Task GetAsync(HttpClient httpClient, string uriParams, Action<ServerResponse> onComplete, Action onError)
         {
+            string url = string.Format("api.php?{0}", uriParams);
+            Console.WriteLine("Making GET request to: " + httpClient.BaseAddress + url);
             HttpResponseMessage response = await httpClient.GetAsync(string.Format("api.php?{0}", uriParams));
             var jsonResponse = await response.Content.ReadAsStringAsync();
             Console.WriteLine($"{jsonResponse}\n");
@@ -52,7 +54,6 @@ namespace ConsoleApp1
             {
                 onError();
             } 
-            
         }
     }
 }
